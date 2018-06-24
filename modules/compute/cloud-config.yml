@@ -1,0 +1,9 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - nginx
+write_files:
+  - path: /var/www/html/index.html
+    content: |
+      Automation for the People
+final_message: "The system is finally up, after $UPTIME seconds"
