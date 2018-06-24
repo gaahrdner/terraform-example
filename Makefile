@@ -10,3 +10,6 @@ apply:
 test:
 	terraform output --json > tests/verify/files/terraform.json
 	inspec exec tests/verify -t aws://
+
+destroy:
+	terraform destroy -var-file=terraform.tfvars.sample
