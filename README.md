@@ -2,6 +2,17 @@
 
 This repository is an example of one way of standing up a webserver in AWS via Terraform.
 
+Resources provisioned include:
+
+* a VPC
+* a public subnet
+* an internet gateway
+* a public route table and it's association
+* management of the default route table
+* a key pair
+* a security group and three associated ingress/egress rules
+* a t2.micro instance
+
 ## Requirements
 
 You'll need to have [terraform installed](https://www.terraform.io/downloads.html), as well as [inspec](https://www.inspec.io/downloads/) for running tests. If installing via Hoembrew on OS X, you might have to first `brew tap chef/chef`

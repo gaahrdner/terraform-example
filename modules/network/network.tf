@@ -59,6 +59,5 @@ resource "aws_route_table_association" "public" {
 resource "aws_default_route_table" "default" {
   default_route_table_id = "${aws_vpc.vpc.default_route_table_id}"
   tags                   = "${merge(map("Name", "${var.name}"), var.tags)}"
-
-  #depends_on             = ["aws_route_table_association.public"]
+  depends_on             = ["aws_route_table_association.public"]
 }
